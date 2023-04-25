@@ -13,6 +13,3 @@ phases:
       - npm run build
     finally:
       - echo App Build Process Completed
-  artifacts:
-    files:
-      - '**/*'
