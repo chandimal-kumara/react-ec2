@@ -3,22 +3,13 @@ version: 0.2
 phases: 
   install:
     commands: 
-      - echo Executing Install Phase
-      - echo Executing Second Part of Install Phase
+      - echo Install node_modules
+      - npm install
     finally:
-      - echo Executing Install Finally
-  pre_build:
-    commands:
-      - echo Executing Pre Build phase
-    finally:
-      - echo Executing Pre Build Finally
+      - echo node_modules Installed
   build:
     commands:
-      - echo Executing Build phase
+      - echo App Build Started
+      - npm run build
     finally:
-      - echo Executing Build Finally
-  post_build:
-    commands:
-      - echo Executing Post Build phase
-    finally:
-      - echo Executing Post Build Finally
+      - echo App Build Process Completed
