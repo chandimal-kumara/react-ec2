@@ -13,3 +13,10 @@ phases:
       - npm run build
     finally:
       - echo App Build Process Completed
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: base_dir
+  name: build-artifact-name
+  discard-paths: no
