@@ -1,0 +1,10 @@
+version: 0.0
+os: ubuntu
+files:
+  - source: build
+    destination: /var/www/html/
+hooks:
+  ApplicationsStart:
+  - location: start.sh
+    timeout: 300
+    runas: ubuntu
