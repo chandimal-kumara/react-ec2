@@ -2,6 +2,9 @@ version: 0.2
 
 phases: 
   install:
+    runtime-versions:
+      nodejs: 12
+  pre_build:
     commands: 
       - echo Install node_modules
       - npm install
@@ -17,8 +20,13 @@ phases:
 artifacts:
   files:
     - '**/*'
-  discard-paths: no
-  base-directory: build/*
+  base-directory: build
+
+# artifacts:
+#   files:
+#     - '**/*'
+#   discard-paths: no
+#   base-directory: build/*
 
 # artifacts:
 #   files:
