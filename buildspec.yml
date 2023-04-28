@@ -16,6 +16,11 @@ phases:
       - npm run build
     finally:
       - echo App Build Process Completed
+  post_build:
+    commands:
+      - echo App Post Build Started
+    finally:
+      - echo App Post Build Process Completed
 
 artifacts:
   files:
