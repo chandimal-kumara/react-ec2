@@ -17,12 +17,17 @@ phases:
     finally:
       - echo App Build Process Completed
 
-artifacts:
-  files:
-    - '**/*'
-    - appspec.yml
-  discard-paths: no
-  base-directory: build
+  artifacts:
+    files:
+      - '**/*'
+    base-directory: build
+
+# artifacts:
+#   files:
+#     - '**/*'
+#     - appspec.yml
+#   discard-paths: no
+#   base-directory: build
 
 # artifacts:
 #   files:
