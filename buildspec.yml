@@ -1,28 +1,15 @@
 version: 0.2
 
 phases: 
-  install:
-    runtime-versions:
-      nodejs: 12
   pre_build:
     commands: 
-      - echo Install node_modules
       - npm install
-    finally:
-      - echo node_modules Installed
   build:
     commands:
-      - echo App Build Started
       - npm run build
-    finally:
-      - echo App Build Process Completed
-  post_build:
-    commands:
-      - echo App Post Build Started
-    finally:
-      - echo App Post Build Process Completed
 
 artifacts:
   files:
-    - '**/*'    
+    - '**/*'
+  discard-paths: no    
   base-directory: build
